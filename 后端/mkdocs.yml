@@ -1,0 +1,91 @@
+site_name: "AgentGuard — LLM guardrails (FastAPI)"
+site_description: >-
+  Open-source FastAPI LLM guardrails — prompt injection defense, PII detection,
+  LLM output validation, and AI governance. Python 3.11+.
+site_url: https://manigaaa27.github.io/agentguard/
+repo_url: https://github.com/MANIGAAA27/agentguard
+repo_name: MANIGAAA27/agentguard
+
+theme:
+  name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Comparison: comparison.md
+  - Quickstart: quickstart.md
+  - Architecture: architecture.md
+  - ADRs:
+      - "001: Streaming vs output validation": adrs/adr-001-streaming-output-validation.md
+  - Operations:
+      - Quality risk score monitoring: operations/quality-risk-score-monitoring.md
+      - Guardrail latency: operations/guardrail-latency.md
+  - API Reference: api-reference.md
+  - Modules:
+      - AI Gateway: modules/gateway.md
+      - Input Guardrails: modules/input-guardrails.md
+      - Prompt Framework: modules/prompt-framework.md
+      - Retrieval Grounding: modules/retrieval-grounding.md
+      - Output Validation: modules/output-validation.md
+      - Action Governance: modules/action-governance.md
+      - Policy Engine: modules/policy-engine.md
+      - Observability: modules/observability.md
+      - Slop Score: modules/slop-score.md
+  - Guides:
+      - Adding a Check: guides/adding-a-check.md
+      - Middleware & control plane: guides/middleware-control-plane.md
+      - Creating Prompt Packages: guides/creating-prompt-packages.md
+      - Writing Policies: guides/writing-policies.md
+      - Deployment: guides/deployment.md
+  - Cookbook:
+      - Full Request Lifecycle: cookbook/full-request-lifecycle.md
+      - Multi-Tenant Setup: cookbook/multi-tenant-setup.md
+      - Red-Team Evaluation: cookbook/red-team-evaluation.md

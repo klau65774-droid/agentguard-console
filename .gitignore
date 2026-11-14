@@ -1,0 +1,47 @@
+# OS & Editors
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.env
+**/.env
+!.env.example
+**/.env.example
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+**/.mypy_cache/
+.ruff_cache/
+**/.ruff_cache/
+.coverage
+htmlcov/
+*.log
+site/
+
+# Node / Frontend
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+*.tsbuildinfo
+*.local
+
+# Local AI Agent Workspace Artifacts
+.cursor/
+**/.cursor/
+AGENTS.md
+**/AGENTS.md
+docs/PROJECT_MEMORY.md
+**/docs/PROJECT_MEMORY.md
+docs/superpowers/
+**/docs/superpowers/
